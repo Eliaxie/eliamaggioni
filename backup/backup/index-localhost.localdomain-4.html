@@ -1,0 +1,121 @@
+<link rel="stylesheet" type="text/css" href="res/style.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+<html>
+
+<body>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <header id="header">
+        <navbar>
+            <div class="topbar">
+                <div id="titlecentered"><p class="ptitle"><b> Elia Maggioni</b></p><div class="ml12 ptitle letter"><p id="titlecentered">Curriculum Vitae</span></p></div></div>
+            </div>
+            <div id="topTitle">
+                <p class="Titolone" id="titlecentered">Website written and designed by <b>Elia Maggioni </b></p>
+            </div>
+        </navbar>
+    </header>
+    <div class="main">
+        <div class="elem1">
+            <div class="maintab" id="card">
+                <div id="immaginediv">
+                  <img src="./res/foto_profilo.png" id="immagine">
+                </div>
+                <div class="maintabdivider"></div>
+                <b><center><span class="moltogrande">Curriculum Vitae </span></center></br></b>
+                <div class="maintext">
+                  <div class="containertestoelem1">
+                      <p class="testo1elem1">
+                          </br>
+                          </span><b><span class="grande">Istruzione:</span></b></br><b>2018 - In Corso</b></br> Laurea Triennale in Ingegneria Informatica presso Politecnico di Milano. </br><b>2013 - 2018 </br>Diploma di Maturità Scientifica</b> presso Liceo Scientifico scienze applicate Ezio Vanoni Menaggio. Voto 74/100</br>
+                          </br>
+                          </br><b><span class="grande">Esperienze Professionali:</span></b></br><b>2017</br>
+                                      I.M.E. TV snc di Grandola ed Uniti (CO)</b> Stage curriculare. Assistenza clienti in loco impianti elettrici ed informatici, affiancato ad un tecnico specialista. Progetto formativo di 150 ore.</b>
+                          </br>
+                          </br>
+                          <b> 2016</br>
+                                      Politecnico di Milano sede di Como</b></br>
+                          Stage curriculare. Sviluppo di applicativi software per controllo hardware e sensoristica. Stesura in team di un documento illustrativo ed informativo da presentare agli insegnanti nell’ambito di un progetto formativo indirizzato ad istituti primari e secondari di primo e secondo grado. Progetto formativo di 150 ore.</br>
+                          </br>
+                          <b>2015</br>
+                                      Fraquelli Ettore s.r.l. di Menaggio (CO)</br></b> Stage curriculare facoltativo. Supporto all’ufficio amministrativo ed al reparto IT. Progetto formativo di 50 ore.
+                          </br>
+                          </br>
+                          <b>2015</br>
+                                      Università Insubria di Como</br></b> Stage curricolare. Programmazione e sviluppo su Lego Mindstorm. Progetto Formativo di 150 ore.</p>
+                  </div>
+                  <div class="containertestoelem1">
+                    <div class="containertesto2elem1">
+                      <p><b><span class="grande"></br>Progetti svolti:</span></b></br></p>
+                      <ul>
+                        <li> Sviluppo HW/SW NAS cloud web server usando MariaDB e ownCloud con Raspberry PI.</li>
+                        <li> Modifica di software open source per monitoraggio mezzi pubblici ATM Milano.</li>
+                        <li> Sviluppo di software in team ad uso di PoliNetwork atto ad aiuto ed indirizzamento matricole e supporto per laureandi/dottorandi.</li>
+                      </ul>
+                      <p><b><span class="grande"></br>Progetti In Corso:</span></b></br></p>
+                      <ul>
+                        <li> Sviluppo Siti Web, personale ed aziendale. </li>
+                        <li> Sviluppo di SW in team ad uso di PoliNetwork atto ad aiuto ed indirizzamento matricole e supporto per laureandi/dottorandi. </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="divider"></div>
+        <div class="elem2">
+            <div class="blocchetti">
+                <div class="sidetab1" id="card"></div><div class="sidetab2" id="card"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+
+    var textWrapper = document.querySelector('.ml12');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+      window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (window.pageYOffset == "0") {
+            document.getElementById("topTitle").style.top = "0";
+            document.getElementById("header").style.height = "285px";
+        } else {
+            document.getElementById("topTitle").style.top = "-500px";
+            document.getElementById("header").style.height = "48px";
+        }
+        prevScrollpos = currentScrollPos;
+        if (window.pageYOffset > "380") {
+          document.getElementById("titlecenteredsec2").innerHTML = "Curriculum Vitae - sezione generale";
+
+        }
+        else{
+          document.getElementById("titlecenteredsec2").innerHTML = "Curriculum Vitae";
+        }
+    }
+    anime.timeline({loop: true})
+      .add({
+        targets: '.ml12 .letter',
+        translateX: [40,0],
+        translateZ: 0,
+        opacity: [0,1],
+        easing: "easeOutExpo",
+        duration: 1200,
+        delay: (el, i) => 500 + 30 * i
+      }).add({
+        targets: '.ml12 .letter',
+        translateX: [0,-30],
+        opacity: [1,0],
+        easing: "easeInExpo",
+        duration: 1100,
+        delay: (el, i) => 100 + 30 * i
+      });
+
+</script>
+
+</html>

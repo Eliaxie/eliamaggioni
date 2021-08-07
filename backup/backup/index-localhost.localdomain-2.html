@@ -1,0 +1,41 @@
+
+<link rel="stylesheet" type="text/css" href="res/style.css">
+<html>
+<body>
+  <header id="header">
+    <navbar>
+      <div class="topbar">
+        <h3 id="titlecentered">Elia Maggioni Curriculum Vitae</h3>
+      </div>
+      <div id="topTitle">
+
+          <h2 class="Titolone" id="titlecentered">Website scritto e disegnato da Elia Maggioni</h1>
+
+      </div>
+    </navbar>
+  </header>
+<div class="main">
+  <div class="maintab" id="card"></div>
+  <div class="blocchetti"><div class="sidetab1" id="card"></div><div class="sidetab2" id="card"></div></div>
+</div>
+</body>
+<footer>
+  ciao
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (window.pageYOffset=="0") {
+    document.getElementById("topTitle").style.top = "0";
+    document.getElementById("header").style.height = "285px";
+  } else {
+    document.getElementById("topTitle").style.top = "-500px";
+    document.getElementById("header").style.height = "48px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+</script>
+</html>

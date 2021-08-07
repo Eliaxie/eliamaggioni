@@ -1,0 +1,37 @@
+
+<link rel="stylesheet" type="text/css" href="res/style.css">
+<html>
+<body>
+  <header id="header">
+    <navbar>
+      <div class="topbar">
+        <p>Elia Maggioni</p>
+      </div>
+      <div id="topTitle">
+        <p id="Titolone">Big Title</p>
+      </div>
+    </navbar>
+  </header>
+<div class="main">
+  <div class="maintab" id="card"></div>
+  <div class="blocchetti"><div class="sidetab1" id="card"></div><div class="sidetab2" id="card"></div></div>
+</div>
+</body>
+<footer>
+  ciao
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+</script>
+</html>
