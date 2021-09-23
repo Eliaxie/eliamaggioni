@@ -49,16 +49,18 @@ navbar{
     top:51px
 }
 .maintab{
-    top:300px;
     width:800px;
-    height:1198px;
     border:var(--border);
     background-color:var(--tabbackground);
     margin:35px auto 50px auto;
     position:relative;
     display:table;
     transform:translateZ(0);
-    max-width:95vw!important
+    max-width:90vw!important;
+    margin-bottom:70px !important;
+}
+.topspacer{
+  height: 150px;
 }
 .stripe{
     width:100%;
@@ -79,7 +81,12 @@ navbar{
     transform:skewY(-3deg) translateY(-50%) translateY(1px) translateX(-3px)!important
 }
 .stripe3{
-    top:150px;
+    top:1000px;
+    background-color:#121212;
+    height:100px
+}
+.stripe4{
+    top:1800px;
     background-color:#121212;
     height:100px
 }
@@ -100,9 +107,9 @@ navbar{
 #group2 .layer_parallasse-back{
     background:#7bd266
 }
-#group3{
-    z-index:4;
-    height:300px
+#group6 {
+  position: relative;
+    top: -150px;
 }
 #tracker{
     position:absolute;
@@ -113,16 +120,16 @@ navbar{
 }
 .parallax{
     height:500px;
-    height:100vh;
+    height: calc(100vh - 51px);
     overflow-x:hidden;
     overflow-y:auto;
     -webkit-perspective:300px;
     perspective:300px;
-    position:relative
+    position:relative;
+    top: 51px;
 }
 .gruppo_parallasse{
     position:relative;
-    height:500px;
     transform-style: preserve-3d;
 }
 .layer_parallasse{
@@ -131,9 +138,6 @@ navbar{
     left:0;
     right:0;
     bottom:0
-}
-.maincard{
-    height:1200px
 }
 .layer_parallasse-fronte{
     -webkit-transform:translateZ(90px) scale(.7);
@@ -187,10 +191,6 @@ navbar{
     padding-left:20px;
     padding-right:50px
 }
-#elem1{
-    height:1350px;
-    top:17px
-}
 .elem2{
     overflow:hidden;
     width:100%
@@ -223,7 +223,6 @@ navbar{
     position:relative;
     margin:0 auto 0 auto;
     padding-top:50px;
-    padding-bottom:50px
 }
 .sidetab1{
     position:relative;
@@ -238,8 +237,8 @@ navbar{
     position:relative;
     display:inline-block;
     background-color:var(--tabbackground);
-    border:var(--border);
     width:var(--sidetab2width);
+    border:var(--border);
     height:300px;
     margin-left:auto
 }
@@ -260,6 +259,27 @@ navbar{
     width:var(--sidetab3width);
     height:300px;
     margin-left:auto
+}
+.sidetab5{
+    position:relative;
+    display:inline-block;
+    background-color:var(--tabbackground);
+    width:var(--sidetab2width);
+    border:var(--border);
+    height:300px;
+    margin-right:5%
+}
+.sidetab6{
+    position:relative;
+    display:inline-block;
+    background-color:var(--tabbackground);
+    border:var(--border);
+    width:var(--sidetab1width);
+    height:300px;
+    margin-left:auto
+}
+.last2{
+  height: 200px;
 }
 header{
     contain:layout;
@@ -282,7 +302,7 @@ header{
     background-color:var(--tabbackground);
     display: grid;
     overflow:hidden;
-    grid-template-columns: 70% 15% 15%;
+    grid-template-columns: 76% 141px 80px;
 }
 .ptitlesub{
     height:51px;
@@ -343,41 +363,43 @@ a:visited{
     width:250px;
     height:250px
 }
-.testo1elem1{
-    width:329px;
-    padding-left:50px;
-    padding-right:20px;
-    height:823px;
-    vertical-align:middle;
-    border-right:1px solid #bdc1c6
+.testo1elem1 {
+    width: 329px;
+    padding-left: 50px;
+    padding-right: 20px;
+    height: 823px;
+    vertical-align: middle;
+    border-right: 1px solid #bdc1c6
 }
+
 .maintext {
     display: grid;
+    grid-template-columns: 1fr 1fr;
+
 }
+
 .testo2elem1 {
     width: 330px;
     height: 823px;
     padding-left: 20px;
-    padding-right: 50px;
+    padding-right: 50px
 }
-.containertestoelem1 {
+
+.containertestoelem {
+    display: inline-grid;
+    vertical-align: top;
     max-width: 400px;
-    margin-top: 16px;
-    grid-row: 1;
+    margin-top: 16px
+}
+
+.containertestoelemA {
     grid-column: 1;
 }
-.containertestoelem2 {
-    max-width: 400px;
-    margin-top: 16px;
-    grid-row: 1;
+
+.containertestoelemB {
     grid-column: 2;
 }
-.maintabdivider{
-    width:100%;
-    height:0;
-    padding-top:45px;
-    text-align:center
-}
+
 .progetto{
     max-width:85%;
     margin:auto
@@ -394,7 +416,9 @@ a:visited{
 }
 .ptitle{
     display:inline-block;
-    padding-left:5px
+    padding-left:5px;
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 .grande{
     font-size:1.2em;
@@ -427,7 +451,7 @@ a:visited{
 .sfalzo{
   grid-row: 1;
   grid-column: 1;
-  margin-left: 30%;
+  margin-left: 24%;
 }
 .topbarlast2{
   grid-row: 1;
@@ -443,7 +467,7 @@ a:visited{
     min-height:19px;
     margin:16px 0 16px 0
 }
-#card{
+.card{
     border-radius:3px;
     -webkit-box-shadow:0 1px 2px 0 rgba(60,64,67,.3),0 2px 6px 2px rgba(60,64,67,.15);
     box-shadow:0 1px 2px 0 rgba(60,64,67,.3),0 2px 6px 2px rgba(60,64,67,.15);
@@ -477,22 +501,45 @@ footer{
     padding-top:10px;
     margin:0
 }
-.footerblock{
-    width:33%;
-    display:table-cell
-}
+
 .testofooter{
     padding:30px 35px 10px 35px;
     margin:0
 }
-#foot-sec{
-    position:relative
+#foot-sec {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
-.footer2{
-    border-left:var(--borderfooter);
-    border-right:var(--borderfooter);
-    text-align:left!important
+
+.calcagno {
+     height: 35px;
+     background-color: var(--calcagnocolor);
+     vertical-align: middle;
+     text-align: center;
+     color: var(--calcagnotesto);
+     grid-row: 2;
+     grid-column: 1/4;
+ }
+
+.footer1 {
+    grid-row: 1;
+    grid-column: 1;
 }
+
+.footer2 {
+    border-left: var(--borderfooter);
+    border-right: var(--borderfooter);
+    text-align: left!important;
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.footer3 {
+    grid-row: 1;
+    grid-column: 3;
+}
+
 .switchdiv{
     z-index:auto;
     pointer-events:all;
@@ -500,6 +547,7 @@ footer{
     padding-right:10px;
     color:var(--colordarktext);
     margin: auto;
+    display: inline-block;
 }
 #darkmode{
     font-size:.9em;
@@ -564,62 +612,76 @@ input:checked+.slider:before{
 }
 @media screen and (max-width:850px){
     .sfalzo{
-        text-align:left!important
+        text-align:left!important;
+        margin-left: 30%;
+    }
+    .topbar{
+        grid-template-columns: 1fr;
     }
     .maintab{
         width:95vw
     }
-    .containertestoelem1{
-        max-width:95vw!important
+    .containertestoelemA {
+        grid-row: 1;
+        grid-column: 1;
     }
-    .testo1elem1{
-        width:auto!important;
-        border-right:0!important;
-        height:auto!important
+    .containertestoelemB {
+        grid-row: 2;
+        grid-column: 1;
     }
-    .maincard{
-        height:fit-content!important;
-        height: -moz-max-content;
+    .maintext {
+        grid-template-columns: 1fr;
     }
-    .containertesto2elem1{
-        padding-left:50px
-    }
-    .testo1elem1{
-        padding-right:50px!important
+    .testo1elem1 {
+        width: auto!important;
+        border-right: 0!important;
+        height: auto!important;
+        padding-right: 50px!important
     }
     .gruppo_parallasse{
         height:fit-content!important;
         height: -moz-max-content;
     }
     .blocchetti{
-        max-width:95vw;
+        max-width:90vw;
         padding-top:0;
         padding-bottom:0
     }
-    .blocchettihidden{
-        display:block
-    }
     .sidetab{
-        width:95vw;
-        height:auto!important
+        display: block;
+        width: 90vw;
+        height: auto!important;
     }
-    .foregruppetti{
-        height:fit-content!important;
-        height: -moz-max-content;
+    #foot-sec {
+        grid-template-columns: 1fr;
     }
-    .footerblock{
-        width:100vw;
-        display:block;
-        border-bottom:1px solid #bdc1c6;
-        border-left-width:0;
-        border-right-width:0;
-        border-top-width:0
+    .calcagno {
+        grid-row: 4;
+        grid-column: 1;
+    }
+    .footer1 {
+        grid-row: 1;
+        grid-column: 1;
+    }
+    .footer2 {
+        grid-row: 2;
+        grid-column: 1;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: var(--borderfooter);
+        border-top: var(--borderfooter);
+        text-align: left!important;
+    }
+
+    .footer3 {
+        grid-row: 3;
+        grid-column: 1;
+    }
+    .testofooter {
+        padding: 30px 35px 30px 35px
     }
     .testofooter{
         padding:30px 35px 30px 35px
-    }
-    .maintab{
-        top:150px
     }
     #group5{
         display:none
@@ -631,8 +693,15 @@ input:checked+.slider:before{
         display:none
     }
 }
+@media screen and (max-width:600px){
+  .sfalzo{
+      text-align:left!important;
+      margin-left: 8%;
+  }
+}
+
 @media screen and (max-width:399px){
     #titlecentered{
-        font-size:.9em!important
+        font-size:.9em!important;
     }
 }

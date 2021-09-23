@@ -7,11 +7,11 @@
       <meta name="viewport" content="width=device-width">
       <title>Elia Maggioni</title>
       <meta name="description" content="Elia Maggioni">
-      <link rel="stylesheet" type="text/css" href="res/style.min.css">
+      <link rel="stylesheet" type="text/css" href="res/style.min.css?v=2.0">
       <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
    </head>
-   <div id="versione1"></div>
+   <div id="versione2"></div>
    <body>
       <navbar>
          <div class="topbar">
@@ -36,7 +36,9 @@
       <div class="parallax" id="parallasse">
          <div id="elem1" class="gruppo_parallasse">
             <div class="layer_parallasse layer_parallasse-fronte maincard">
-               <div class="maintab " id="card">
+              <div class="topspacer">
+              </div>
+               <div class="maintab card">
                   <div id="immaginediv"> <img src="./res/foto_profilo.png" id="immagine"> </div>
                   <div class="maintabdivider"></div>
                   <b>
@@ -73,8 +75,35 @@
                      </div>
                   </div>
                </div>
+               <div class="blocchetti">
+                  <div class="sidetab1 sidetab card">
+                     <p class="titoloblock">Progetto: NAS cloud web server</p>
+                     <p class="testoblock"> In questo progetto ho utilizzato una Raspberry Pi connessa ad un hard disk per creare un cloud storage online da cui potessi accedere da remoto.</br>Per il database ho usato MariaDB mentre come gestore del cloud ho utilizzato ownCloud. Ho infine usato un dynamic-DNS per poter raggiungere il cloud storage dall'esterno della mia rete locale. Ho poi configurato il cloud per essere accessibile dall'applicazione mobile, web client e FTP</br></p>
+                  </div><div class="sidetab2 sidetab card">
+                     <p class="titoloblock">Progetto: Monitoraggio mezzi pubblici</p>
+                     <p class="testoblock"> In questo progetto ho utilizzato una Raspberry Pi connessa ad uno schermo LCD per ricreare un tabellone di arrivi e partenze. Ho modificato del codice open source e connesso con il sito di ATM Milano per la gestione dei mezzi di trasporto.</br></p>
+                  </div>
+               </div>
+               <div class="blocchetti">
+                 <div class="sidetab3 sidetab card">
+                    <p class="titoloblock">Progetto: Sviluppo di siti web</p>
+                    <p class="testoblock">Insieme a questo sito, ne ho sviluppati molti altri in precedenza, ad oggi in hosting ci sono <a href="http://www.falerestprova2.altervista.org/">www.falerestprova2.altervista.org</a> ed inoltre <a href="http://www.cube.eliamaggioni.com/">www.cube.eliamaggioni.com</a>.</br>Il primo si tratta di un sito creato per l'azienda di famiglia, poi mai utilizzato. Il sito principale è completo in tutte le sue parti, mentre i sottodomini non sono stati sviluppati.</br>Il secondo è un progetto personale, un modo innovativo per fare siti web.<br></p>
+                 </div><div class="sidetab4 sidetab card">
+                    <p class="titoloblock">Progetto: Sviluppo applicativi software</p>
+                    <p class="testoblock"> In questo progetto ancora in corso ci siamo occupati di sviluppo di SW in team ad uso di PoliNetwork atto ad aiuto ed indirizzamento matricole e supporto per laureandi/dottorandi. Questi (vari) progetti interessano diversi campi tra cui lo sviluppo e gestione di gruppi, organizzazione studenti e staff e sviluppo di siti web.</br></p>
+                 </div>
+               </div>
+               <div class="blocchetti last2">
+                 <div class="sidetab5 sidetab card">
+                    <p class="titoloblock">Progetto: Garante del PoliNetwork e ruolo di Gestione lato tecnico</p>
+                    <p class="testoblock">Sono entrato nel network a fine 2019, ho creduto nel progetto sin dal principio ed ho cercato di migliorarlo dall'interno di persona e coinvolgendo altre persone nel farlo. Ad oggi sono Garante, gestisco l'interno lato tecnico del network e coordino i progetti ad esso collegati.</br></p>
+                 </div><div class="sidetab6 sidetab card">
+                    <p class="titoloblock">Progetto: Calcolatrice</p>
+                    <p class="testoblock">Calcolatrice funzionante in standard CPL2 a 4 bit. Il risultato, frutto di ore di cablaggio ed assemblaggio seguite al design logico e d'interfaccia della scheda, si articola in quattro bottoni per ogni addendo controllati da dei FlipFlop R/S (più un quinto bottone di Reset che comanda tutti i reset dei FF) e un altro FF R/S per controllare il comando di somma o sottrazione. La logica della somma algebrica è svolta con dei blocchi full-adder funzionti tramite gates NAND e NOR. La calcolatrice è inoltre dotata di un sistema di overflow detection sviluppata anch'essa integralmente tramite gates logici di tipo NOR e OR.</br></p>
+                 </div>
+               </div>
             </div>
-            <div class="layer_parallasse layer_parallasse-base navibar">
+       <div class="layer_parallasse layer_parallasse-base navibar">
                <div class="ptitlesub">
                   <div class="ptitlesubcontainer">
                      <div class="switchdiv switchdivb">
@@ -88,70 +117,30 @@
                   <p class="Titolone" id="titlecentered">Sito web scritto e disegnato da <i>Elia Maggioni </i>
                  </div>
                </div>
+               <div class="stripe stripe3"></div>
+               <div class="stripe stripe4"></div>
             </div>
             <div class="layer_parallasse layer_parallasse-back stripeparallax">
                <div class="stripe stripe1"></div>
                <div class="stripe stripe2"></div>
             </div>
          </div>
-         <div id="group3" class="gruppo_parallasse">
-            <div class="elem2 layer_parallasse layer_parallasse-fronte foregruppetti">
-               <div class="blocchetti immagine1">
-                  <div class="sidetab1 sidetab" id="card">
-                     <p class="titoloblock">Progetto: NAS cloud web server</p>
-                     <p class="testoblock"> In questo progetto ho utilizzato una Raspberry Pi connessa ad un hard disk per creare un cloud storage online da cui potessi accedere da remoto.</br>Per il database ho usato MariaDB mentre come gestore del cloud ho utilizzato ownCloud. Ho infine usato un dynamic-DNS per poter raggiungere il cloud storage dall'esterno della mia rete locale. Ho poi configurato il cloud per essere accessibile dall'applicazione mobile, web client e FTP</br>
-                  </div><div class="sidetab2 sidetab" id="card">
-                     <p class="titoloblock">Progetto: Monitoraggio mezzi pubblici</p>
-                     <p class="testoblock"> In questo progetto ho utilizzato una Raspberry Pi connessa ad uno schermo LCD per ricreare un tabellone di arrivi e partenze. Ho modificato del codice open source e connesso con il sito di ATM Milano per la gestione dei mezzi di trasporto.</br>
-                  </div>
-               </div>
-               <div class="blocchetti blocchettihidden">
-                  <div class="sidetab3 sidetab" id="card">
-                     <p class="titoloblock">Progetto: Sviluppo di siti web</p>
-                     <p class="testoblock">Insieme a questo sito, ne ho sviluppati molti altri in precedenza, l'unico ad oggi in hosting è <a href="http://www.falerestprova2.altervista.org/">www.falerestprova2.altervista.org</a>.</br>Si tratta di un sito creato per l'azienda di famiglia, poi mai utilizzato. Il sito principale è completo in tutte le sue parti, mentre i sottodomini non sono stati sviluppati.</br>
-                  </div><div class="sidetab4 sidetab" id="card">
-                     <p class="titoloblock">Progetto: Sviluppo applicativi software</p>
-                     <p class="testoblock"> In questo progetto ancora in corso ci siamo occupati di sviluppo di SW in team ad uso di PoliNetwork atto ad aiuto ed indirizzamento matricole e supporto per laureandi/dottorandi. Questi (vari) progetti interessano diversi campi tra cui lo sviluppo e gestione di gruppi, organizzazione studenti e staff e sviluppo di siti web.</br>
-                  </div>
-               </div>
-            </div>
-            <div class="layer_parallasse layer_parallasse-base basegruppetti">
-               <div class="stripe stripe3"></div>
-               <div class="stripe stripe4"></div>
-            </div>
-         </div>
-         <div id="group5" class="gruppo_parallasse">
-            <div class="layer_parallasse layer_parallasse-fronte">
-               <div class="blocchetti">
-                  <div class="sidetab3 sidetab" id="card">
-                     <p class="titoloblock">Progetto: Sviluppo di siti web</p>
-                     <p class="testoblock">Insieme a questo sito, ne ho sviluppati molti altri in precedenza, l'unico ad oggi in hosting è <a href="http://www.falerestprova2.altervista.org/">www.falerestprova2.altervista.org</a>.</br>Si tratta di un sito creato per l'azienda di famiglia, poi mai utilizzato. Il sito principale è completo in tutte le sue parti, mentre i sottodomini non sono stati sviluppati.</br>
-                  </div><div class="sidetab4 sidetab" id="card">
-                     <p class="titoloblock">Progetto: Sviluppo applicativi software</p>
-                     <p class="testoblock"> In questo progetto ancora in corso ci siamo occupati di sviluppo di SW in team ad uso di PoliNetwork atto ad aiuto ed indirizzamento matricole e supporto per laureandi/dottorandi. Questi (vari) progetti interessano diversi campi tra cui lo sviluppo e gestione di gruppi, organizzazione studenti e staff e sviluppo di siti web.</br>
-                  </div>
-               </div>
-            </div>
-            <div class="layer_parallasse layer_parallasse-base"> </div>
-         </div>
-         <div id="group6" class="gruppo_parallasse footerparallax">
-            <div class="layer_parallasse layer_parallasse-base footerparallax">
-               <footer id="foot-sec">
-                  <div class="footer1 footerblock">
-                     <p class="testofooter"> Nato a Sondrio il 07/09/1999. Residente in via Bel Cantone 2, 22010 Grandola ed Uniti (CO). Trasferitomi a Milano nel 2018 per frequentare l'università dopo un viaggio in Europa di 1 mese. Mi sono occupato tra le altre cose di vari progetti in questo tempo riportati sopra.</br> Pianifico di ottenere la patente nella prima fase del 2020. </p>
-                  </div>
-                  <div class="footer2 footerblock">
-                     <p class="testofooter"> E' possibile contattarmi via:</br> - mail personale: elia.maggioni@gmail</br> - mail accademica: elia.maggioni@mail.polimi.it</br> - Telefono: (+39) 339 889 6414</br> </p>
-                  </div>
-                  <div class="footer3 footerblock">
-                     <p class="testofooter"> In compliance with the Italian Legislative Decree no. 196 dated 30/06/2003, I hereby authorize the recipient of this website to use and process my personal details for the purpose of recruiting and selecting staff and I confirm to be informed of my rights in accordance to art. 7 of the above-mentioned decree. </p>
-                  </div>
-                  <div class="calcagno">
-                     <p class="calcagnotext"><b>Website written and designed by <i>Elia Maggioni</b></i> </p>
-                  </div>
-               </footer>
-            </div>
-         </div>
+    <footer>
+          <div id="foot-sec">
+              <div class="footer1 footerblock">
+                  <p class="testofooter"> Nato a Sondrio il 07/09/1999. Residente in via Bel Cantone 2, 22010 Grandola ed Uniti (CO). Trasferitomi a Milano nel 2018 per frequentare l'università dopo un viaggio in Europa di 1 mese. Mi sono occupato tra le altre cose di vari progetti in questo tempo riportati sopra.</br> Pianifico di ottenere la patente nella prima fase del 2020. </p>
+              </div>
+              <div class="footer2 footerblock">
+                  <p class="testofooter"> E' possibile contattarmi via:</br> - mail personale: elia.maggioni@gmail</br> - mail accademica: elia.maggioni@mail.polimi.it</br> - Telefono: (+39) 339 889 6414</br> </p>
+              </div>
+              <div class="footer3 footerblock">
+                  <p class="testofooter"> In compliance with the Italian Legislative Decree no. 196 dated 30/06/2003, I hereby authorize the recipient of this website to use and process my personal details for the purpose of recruiting and selecting staff and I confirm to be informed of my rights in accordance to art. 7 of the above-mentioned decree. </p>
+              </div>
+              <div class="calcagno">
+                  <p class="calcagnotext"><b>Website written and designed by <i>Elia Maggioni</i></b></p>
+          </div>
+      </div>
+    </footer>
       </div>
       </div><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <script src="./res/javas.js"></script>
    </body>
