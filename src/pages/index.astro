@@ -1,0 +1,219 @@
+---
+import 'virtual:windi.css';
+---
+
+<!DOCTYPE html>
+<html class="h-full">
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Elia Maggioni</title>
+    <meta charset="UTF-8">
+    <meta
+    name="description"
+    content="Elia Maggioni"
+    />
+    <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+    
+</head>
+<body class=" dark:bg-gray-900">
+    
+<nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+    <div class="container flex flex-wrap items-center justify-between mx-auto">
+        <button id="theme-toggle" type="button" class="flex item-center text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+        </button>
+    <div class="flex md:order-2">
+        <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><a class="button" href="mailto:elia.maggioni.gm@gmail.com">Contact me</a></button>
+        <button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-cta" aria-expanded="true" id="navbar-ctr">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+      </button>
+    </div>
+    
+    
+    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+      <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <li>
+            <a href="#skills" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" aria-current="page">Skills</a>
+        </li>
+        <li>
+          <a href="#experience" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Experience</a>
+        </li>
+        <li>
+          <a href="#education" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Education</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+
+
+<div class="w-full px-4 mx-auto max-w-8xl grid align-content-center">
+    <table style="float: left;max-width: 5.1e+2pt;border: none;border-collapse:collapse;" class="!text-slate-800 !dark:text-slate-300 md:ml-40 lg:ml-74">
+        <tbody>
+            <tr>
+                <td style="width: 176.25pt;padding: 3.6pt;height: 58.8pt;vertical-align: top;">
+                    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;line-height:normal;font-size:35px;font-family:"Arial",sans-serif;'><strong><span style="font-size:29px;font-family:Raleway;">Elia<br>Maggioni</span></strong></p>
+                    <p style='margin:0cm;line-height:115%;font-size:20px;font-family:"Arial",sans-serif;color:#666666;'><span style="color:#FF7A5E;">Software Engineer</span></p>
+                </td>
+                <td style="width: 334.05pt;padding: 5pt;height: 58.8pt;vertical-align: top;">
+                    <div align="center" style='margin:0cm;line-height:normal;font-size:15px;font-family:"Arial",sans-serif;text-align:center;'><span style='font-size:13px;font-family:"Lato",sans-serif;'>&nbsp;</span></div>
+                    <p style='margin:0cm;line-height:normal;font-size:15px;font-family:"Arial",sans-serif;margin-top:10.0pt;'><span style='font-size:13px;font-family:"Lato",sans-serif;color:#D44500;'>+39 -----</span></p>
+                    <p style='margin:0cm;line-height:normal;font-size:15px;font-family:"Arial",sans-serif;'><span style='font-size:13px;font-family:  "Lato",sans-serif;color:#D44500;'>elia.maggioni(at)gmail.com -&nbsp;</span><a href="https://github.com/Eliaxie"><span style='font-size:13px;font-family:  "Lato",sans-serif;'>github.com/Eliaxie</span></a></p>
+                    <p style='margin:0cm;line-height:normal;font-size:15px;font-family:"Arial",sans-serif;'><span style='font-size:13px;font-family:  "Lato",sans-serif;color:#D44500;'>Swiss G-Permit holder</span></p>
+                    <p style='margin:0cm;line-height:normal;font-size:15px;font-family:"Arial",sans-serif;'><span style='font-size:13px;font-family:  "Lato",sans-serif;color:#D44500;'>English C1 level (TOEIC)</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 176.25pt;padding: 3.6pt;height: 54.45pt;vertical-align: top;">
+                    <p style='margin:0cm;line-height:normal;font-size:15px;font-family:"Arial",sans-serif;'><strong><span style='font-size:19px;font-family:"Arial Unicode MS";'>ㅡ</span></strong></p>
+                    <h1 style='margin-top:4.0pt;margin-right:0cm;margin-bottom:0cm;margin-left:  0cm;line-height:normal;font-size:27px;font-family:"Arial",sans-serif;font-weight:normal;'><strong><span style="font-size:16px;font-family:Raleway;"><a id="skills"></a>Skills</span></strong></h1>
+                </td>
+                <td style="width: 334.05pt;padding: 5pt;height: 54.45pt;vertical-align: top;">
+                    <div align="center" style='margin:0cm;line-height:normal;font-size:15px;font-family:"Arial",sans-serif;margin-top:4.0pt;text-align:center;'><span style='font-size:13px;font-family:"Lato",sans-serif;'>&nbsp;</span></div>
+                    <p style='margin:0cm;line-height:normal;font-size:15px;font-family:"Arial",sans-serif;margin-top:6.0pt;'><span style='font-size:13px;font-family:"Lato",sans-serif;'>Experienced software engineer with a background of building scalable systems in blockchain, data engineering and general-purpose software.</span></p>
+                    <p style='margin:0cm;line-height:  normal;font-size:15px;font-family:"Arial",sans-serif;margin-top:4.0pt;text-align:justify;'><span style='font-size:13px;font-family:"Lato",sans-serif;'>Expert in TypeScript, Node.js, React, Java, C#, Python, SQL, GraphQL</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 176.25pt;padding: 3.6pt;height: 351.45pt;vertical-align: top;">
+                    <p style='margin:0cm;line-height:normal;font-size:15px;font-family:"Arial",sans-serif;'><strong><span style='font-size:19px;font-family:"Arial Unicode MS";'>ㅡ</span></strong></p>
+                    <h1 style='margin-top:4.0pt;margin-right:0cm;margin-bottom:0cm;margin-left:  0cm;line-height:normal;font-size:27px;font-family:"Arial",sans-serif;font-weight:normal;'><strong><span style="font-size:16px;font-family:Raleway;"> <a id="experience"></a> Experience</span></strong></h1>
+                </td>
+                <td style="width: 334.05pt;padding: 5pt;height: 351.45pt;vertical-align: top;">
+                    <div align="center" style='margin:0cm;line-height:normal;font-size:15px;font-family:"Arial",sans-serif;margin-top:4.0pt;text-align:center;'><span style='font-size:13px;font-family:"Lato",sans-serif;'>&nbsp;</span></div>
+                    <h2 style='margin-top:6.0pt;margin-right:0cm;margin-bottom:0cm;margin-left:  0cm;line-height:normal;font-size:21px;font-family:"Arial",sans-serif;font-weight:normal;'><strong><span style='font-size:15px;font-family:"Lato",sans-serif;'>Runtime Machines /&nbsp;</span></strong><span style='font-size:15px;font-family:"Lato",sans-serif;'>Research Engineer &ndash; DevOps Team</span></h2>
+                    <h3 style='margin-top:16.0pt;margin-right:0cm;margin-bottom:4.0pt;margin-left:0cm;line-height:normal;font-size:19px;font-family:"Arial",sans-serif;color:#434343;font-weight:normal;margin:0cm;'><span style='font-size:12px;font-family:"Lato",sans-serif;color:#666666;'>November 2022 - PRESENT, Lugano, Switzerland</span></h3>
+                    <div style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'>
+                        <ul style="margin-bottom:0cm;list-style-type: undefined;margin-left:26px;">
+                            <li style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'><span style='font-family:"Lato",sans-serif;'>Creating K8s infrastructure on Azure with Terraform for IaC and developing CI/CD pipelines with GitHub Actions and ArgoCD.</span></li>
+                        </ul>
+                    </div>
+                    <h2 style='margin-top:4.0pt;margin-right:0cm;margin-bottom:0cm;margin-left:  0cm;line-height:normal;font-size:21px;font-family:"Arial",sans-serif;font-weight:normal;'><strong><span style='font-size:15px;font-family:"Lato",sans-serif;'>PoliNetwork Organization /&nbsp;</span></strong><span style='font-size:15px;font-family:"Lato",sans-serif;'>President</span><strong><span style='font-size:15px;font-family:"Lato",sans-serif;'>&nbsp;</span></strong><span style='font-size:15px;font-family:"Lato",sans-serif;'>and Head IT&nbsp;</span></h2>
+                    <h3 style='margin-top:16.0pt;margin-right:0cm;margin-bottom:4.0pt;margin-left:0cm;line-height:normal;font-size:19px;font-family:"Arial",sans-serif;color:#434343;font-weight:normal;margin:0cm;'><span style='font-size:12px;font-family:"Lato",sans-serif;color:#666666;'>May 2020 - PRESENT, Polytechnic University of Milan, Italy</span></h3>
+                    <div style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'>
+                        <ul style="margin-bottom:0cm;list-style-type: undefined;margin-left:26px;">
+                            <li style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'><span style='font-family:"Lato",sans-serif;'>Management of the whole organization&rsquo;s infrastructure</span></li>
+                            <li style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'><span style='font-family:"Lato",sans-serif;'>Team development and maintenance of software in C#</span></li>
+                            <li style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'><span style='font-family:"Lato",sans-serif;'>Built multiple Jekyll and React websites</span></li>
+                            <li style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'><span style='font-family:"Lato",sans-serif;'>Staff coordination and communication with external entities</span></li>
+                            <li style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'><span style='font-family:"Lato",sans-serif;'>Management of server and databases on AWS and CI/CD</span></li>
+                            <li style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'><span style='font-family:"Lato",sans-serif;'>Development of general-purpose applications to increase students&rsquo; wellbeing, often in partnership with the University</span></li>
+                        </ul>
+                    </div>
+                    <h2 style='margin-top:6.0pt;margin-right:0cm;margin-bottom:0cm;margin-left:  0cm;line-height:normal;font-size:21px;font-family:"Arial",sans-serif;font-weight:normal;'><strong><span style='font-size:15px;font-family:"Lato",sans-serif;'>Inxide /&nbsp;</span></strong><span style='font-size:15px;font-family:"Lato",sans-serif;'>Internship as AI Specialist &ndash; Chat Bot</span></h2>
+                    <h3 style='margin-top:16.0pt;margin-right:0cm;margin-bottom:4.0pt;margin-left:0cm;line-height:normal;font-size:19px;font-family:"Arial",sans-serif;color:#434343;font-weight:normal;margin:0cm;'><span style='font-size:12px;font-family:"Lato",sans-serif;color:#666666;'>February 2022 - September 2022, Milan, Italy</span></h3>
+                    <div style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'>
+                        <ul style="margin-bottom:0cm;list-style-type: undefined;margin-left:26px;">
+                            <li style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'><span style='font-family:"Lato",sans-serif;'>Built infrastructure using Node.JS to connect our system to the chat provider</span></li>
+                            <li style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'><span style='font-family:"Lato",sans-serif;'>Developed multiple chat bots and an analytics backend, all connected to the company legacy systems</span></li>
+                            <li style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'><span style='font-family:"Lato",sans-serif;'>R&amp;D of an analytics backend to monitor and increase performance of the system in Django</span></li>
+                        </ul>
+                    </div>
+                    <h2 style='margin-top:4.0pt;margin-right:0cm;margin-bottom:0cm;margin-left:  0cm;line-height:normal;font-size:21px;font-family:"Arial",sans-serif;font-weight:normal;'><strong><span style='font-size:15px;font-family:"Lato",sans-serif;'>Hoprnet /&nbsp;</span></strong><span style='font-size:15px;font-family:"Lato",sans-serif;'>Collaboration &ndash; Software Engineering</span></h2>
+                    <h3 style='margin-top:16.0pt;margin-right:0cm;margin-bottom:4.0pt;margin-left:0cm;line-height:normal;font-size:19px;font-family:"Arial",sans-serif;color:#434343;font-weight:normal;margin:0cm;'><span style='font-size:12px;font-family:"Lato",sans-serif;color:#666666;'>February 2022 - June 2022, Milan, Italy</span></h3>
+                    <div style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'>
+                        <ul style="margin-bottom:0cm;list-style-type: undefined;margin-left:26px;">
+                            <li style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'><span style='font-family:"Lato",sans-serif;'>Developed a&nbsp;</span><a href="https://hopr-visual.vercel.app/"><span style='font-family:"Lato",sans-serif;'>React application</span></a><span style='font-family:"Lato",sans-serif;'>&nbsp;to visualize their Network</span></li>
+                            <li style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'><span style='font-family:"Lato",sans-serif;'>Added a search algorithm to visualize a local cluster of nodes</span></li>
+                            <li style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'><span style='font-family:"Lato",sans-serif;'>Built an application and a backend Node.JS daemon to send signed transactions through their Network&nbsp;</span></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 176.25pt;padding: 3.6pt;height: 182pt;vertical-align: top;">
+                    <p style='margin:0cm;line-height:normal;font-size:15px;font-family:"Arial",sans-serif;'><strong><span style='font-size:19px;font-family:  "Arial Unicode MS";'>ㅡ</span></strong></p>
+                    <h1 style='margin-top:4.0pt;margin-right:0cm;margin-bottom:0cm;margin-left:  0cm;line-height:normal;font-size:27px;font-family:"Arial",sans-serif;font-weight:normal;'><strong><span style="font-size:16px;font-family:Raleway;"><a id="education"></a>Education</span></strong></h1>
+                </td>
+                <td style="width: 334.05pt;padding: 5pt;height: 182pt;vertical-align: top;">
+                    <div align="center" style='margin:0cm;line-height:normal;font-size:15px;font-family:"Arial",sans-serif;margin-top:4.0pt;text-align:center;'><span style='font-size:13px;font-family:"Lato",sans-serif;'>&nbsp;</span></div>
+                    <h2 style='margin-top:6.0pt;margin-right:0cm;margin-bottom:0cm;margin-left:  0cm;line-height:normal;font-size:21px;font-family:"Arial",sans-serif;font-weight:normal;'><strong><span style='font-size:15px;font-family:"Lato",sans-serif;'>Polytechnic University of Milan /&nbsp;</span></strong><span style='font-size:15px;font-family:"Lato",sans-serif;'>M.Sc. in Computer Science and Engineering</span></h2>
+                    <h3 style='margin-top:16.0pt;margin-right:0cm;margin-bottom:4.0pt;margin-left:0cm;line-height:normal;font-size:19px;font-family:"Arial",sans-serif;color:#434343;font-weight:normal;margin:0cm;'><span style='font-size:12px;font-family:"Lato",sans-serif;color:#666666;'>September 2021 &ndash; PRESENT, Milan, Italy</span></h3>
+                    <div style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'>
+                        <ul style="margin-bottom:0cm;list-style-type: undefined;margin-left:26px;">
+                            <li style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'><span style='font-family:"Lato",sans-serif;'>Built Java backend using JPA and Java Beans</span></li>
+                            <li style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'><span style='font-family:"Lato",sans-serif;'>Released a research paper on crypto arbitrages and MEV, using mathematical models to optimize opportunity search</span></li>
+                        </ul>
+                    </div>
+                    <h2 style='margin-top:6.0pt;margin-right:0cm;margin-bottom:0cm;margin-left:  0cm;line-height:normal;font-size:21px;font-family:"Arial",sans-serif;font-weight:normal;'><strong><span style='font-size:15px;font-family:"Lato",sans-serif;'>Polytechnic University of Milan /&nbsp;</span></strong><span style='font-size:15px;font-family:"Lato",sans-serif;'>B.S. in Computer Engineering</span></h2>
+                    <h3 style='margin-top:16.0pt;margin-right:0cm;margin-bottom:4.0pt;margin-left:0cm;line-height:normal;font-size:19px;font-family:"Arial",sans-serif;color:#434343;font-weight:normal;margin:0cm;'><span style='font-size:12px;font-family:"Lato",sans-serif;color:#666666;'>September 2018 &ndash; September 2021, Milan, Italy</span></h3>
+                    <div style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'>
+                        <ul style="margin-bottom:0cm;list-style-type: undefined;margin-left:26px;">
+                            <li style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'><span style='font-family:"Lato",sans-serif;'>Graduated with 95/110</span></li>
+                            <li style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'><span style='font-family:"Lato",sans-serif;'>Masters of the Renaissance &mdash;&nbsp;</span><a href="https://github.com/marcofasa/ing-sw-2021-Fasanella-Maggioni-Manini"><span style='font-family:"Lato",sans-serif;'>Java application</span></a><span style='font-family:"Lato",sans-serif;'>: development of Java Client-Server MVC application. Grade 30/30</span></li>
+                            <li style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'><span style='font-family:"Lato",sans-serif;'>Development and management of a Telegram Bot in C# to handle student&rsquo;s contributions in PoliNetwork&rsquo;s repositories.</span></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'>&nbsp;</p>
+</div>
+  
+</body>
+<script>
+    var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+// Change the icons inside the button based on previous settings
+if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    themeToggleLightIcon.classList.remove('hidden');
+} else {
+    themeToggleDarkIcon.classList.remove('hidden');
+}
+
+var themeToggleBtn = document.getElementById('theme-toggle');
+
+themeToggleBtn.addEventListener('click', function() {
+
+    // toggle icons inside button
+    themeToggleDarkIcon.classList.toggle('hidden');
+    themeToggleLightIcon.classList.toggle('hidden');
+
+    // if set via local storage previously
+    if (localStorage.getItem('color-theme')) {
+        if (localStorage.getItem('color-theme') === 'light') {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('color-theme', 'dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('color-theme', 'light');
+        }
+
+    // if NOT set via local storage previously
+    } else {
+        if (document.documentElement.classList.contains('dark')) {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('color-theme', 'light');
+        } else {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('color-theme', 'dark');
+        }
+    }
+    
+});
+</script>
+<script>
+    // navbar toggle button
+    const targetEl = document.getElementById('navbar-cta');
+    const triggerEl = document.getElementById('navbar-ctr');
+    
+    if(triggerEl != null && targetEl != null)
+      triggerEl.addEventListener("click", function() {
+        targetEl.classList.toggle('hidden')
+      })
+    
+    
+    </script>
+</html>

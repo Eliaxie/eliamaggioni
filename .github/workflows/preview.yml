@@ -1,0 +1,44 @@
+name: Github Pages Astro CI
+
+on:
+  # Trigger the workflow every time you push to the `main` branch
+  # Using a different branch name? Replace `main` with your branch’s name
+  pull_request:
+
+  # Allows you to run this workflow manually from the Actions tab on GitHub.
+  workflow_dispatch:
+
+jobs:
+  build_and_preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: Install, build, and upload your site
+        uses: withastro/action@v0
+      - name: Deploy to GitHub Pages
+        run: |
+          yarn
+          yarn build
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: preview
+          path: dist/
+  retrieve_artifact:
+      runs-on: ubuntu-latest
+      needs: build_and_preview
+      steps:
+      - name: script
+        run: |
+          id=$(curl -s -H "Accept: application/vnd.github+json" https://api.github.com/repos/PoliNetworkOrg/PoliNetworkAstro/actions/artifacts | jq -c '.artifacts |  .[] ' | jq -s ' .[0] | .id')
+          echo $id
+          echo "PR_ENV=$(echo https://polinetworkpr.github.io/$id)" >> $GITHUB_ENV
+      - name: Comment PR
+        uses: thollander/actions-comment-pull-request@v1
+        with:
+          message: |
+            Check the PR preview [here](${{ env.PR_ENV }})! :wave:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
