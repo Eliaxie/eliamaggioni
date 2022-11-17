@@ -11,8 +11,7 @@ import WindiCSS from 'vite-plugin-windicss'
 // @ts-check
 export default /** @type {import('astro').AstroUserConfig} */ (
   {
-    site: 'https://eliaxie.github.io',
-    base: '/eliamaggioni',
+    site: 'https://eliamaggioni.com',
     // Set "renderers" to "[]" to disable all default, builtin component support.
     // renderers: [],
     vite: {
